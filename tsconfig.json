@@ -4,6 +4,9 @@
       "noImplicitAny": true,
       "removeComments": true,
       "preserveConstEnums": true,
-      "sourceMap": true
-    }
+      "sourceMap": true,
+      "outDir": "build"
+    },
+    "include": ["app/**/*"],
+    "exclude": ["node_modules"],
 }
