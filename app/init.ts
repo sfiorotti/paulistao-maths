@@ -1,42 +1,31 @@
 import { TableBuild } from './models/table'
-import { Team, TeamBuild } from './models/teams'
+import { Teams } from './initTeams'
+import { Round as Round1 } from './rounds/1'
+import { Round as Round2 } from './rounds/2'
+import { Round as Round3 } from './rounds/3'
+import { Round as Round4 } from './rounds/4'
+import { Round as Round5 } from './rounds/5'
+import { Round as Round6 } from './rounds/6'
+import { Round as Round7 } from './rounds/7'
+import { Round as Round8 } from './rounds/8'
+import { Round as Round9 } from './rounds/9'
+import { Round as Round10 } from './rounds/10'
+import { Round as Round11 } from './rounds/11'
+import { Round as Round12 } from './rounds/12'
 
-const AguaSanta = new TeamBuild('Água Santa', 'A')
-const Botafogo = new TeamBuild('Botafogo', 'C')
-const Bragantino = new TeamBuild('Bragantino', 'D')
-const Corinthians = new TeamBuild('Corinthians', 'A')
-const Ferroviaria = new TeamBuild('Ferroviária', 'B')
-const Guarani = new TeamBuild('Guarani', 'A')
-const InterLimeira = new TeamBuild('Inter de Limeira', 'A')
-const Ituano = new TeamBuild('Ituano', 'C')
-const Mirassol = new TeamBuild('Mirassol', 'C')
-const Novorizontino = new TeamBuild('Novorizontino', 'B')
-const Palmeiras = new TeamBuild('Palmeiras', 'C')
-const PontePreta = new TeamBuild('Ponte Preta', 'D')
-const SantoAndre = new TeamBuild('Santo André', 'D')
-const Santos = new TeamBuild('Santos', 'D')
-const SaoBernardo = new TeamBuild('São Bernardo', 'B')
-const SaoPaulo = new TeamBuild('São Paulo', 'B')
-
-const Teams: Team[] = [
-  AguaSanta,
-  Botafogo,
-  Bragantino,
-  Corinthians,
-  Ferroviaria,
-  Guarani,
-  InterLimeira,
-  Ituano,
-  Mirassol,
-  Novorizontino,
-  Palmeiras,
-  PontePreta,
-  SantoAndre,
-  Santos,
-  SaoBernardo,
-  SaoPaulo
-]
-
-const Table = new TableBuild(Teams)
+const Table = new TableBuild(Teams, [
+  Round1,
+  Round2,
+  Round3,
+  Round4,
+  Round5,
+  Round6,
+  Round7,
+  Round8,
+  Round9,
+  Round10,
+  Round11,
+  Round12
+])
 Table.showTableGroup()
 Table.showTableComplete()
