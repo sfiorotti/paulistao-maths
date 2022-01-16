@@ -22,7 +22,7 @@ export class TableBuild implements Table {
   }
 
   showTableComplete (): void {
-    const sortTeams = sortBy(this.teams, 'group')
+    const sortTeams = sortBy(this.teams, 'name')
     console.log(sortTeams)
   }
 }
