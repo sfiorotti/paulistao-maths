@@ -27,6 +27,7 @@ export class TableBuild implements Table {
 
   showTableComplete (): void {
     const sortTeams = sortBy(this.teams, 'name')
-    console.log(sortTeams)
+    const sortPoints = sortBy(sortTeams, 'points')
+    console.log(sortPoints)
   }
 }

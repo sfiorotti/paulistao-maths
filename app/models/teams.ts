@@ -1,7 +1,7 @@
 export interface Team {
   name: string
   group: string
-  points(): number
+  points: number
   games(): number
   won: number
   drawn: number
@@ -14,6 +14,7 @@ export interface Team {
   setDrawn(): void
   setGoalsFor(goals: number): void
   setGoalsAgainst(goals: number): void
+  calculatePoints(): void
 }
 
 export class TeamBuild implements Team {
@@ -24,14 +25,15 @@ export class TeamBuild implements Team {
   lost: number = 0
   goalsFor: number = 0
   goalsAgainst: number = 0
+  points: number = 0
 
   constructor (name: string, group: string) {
     this.name = name
     this.group = group
   }
 
-  points (): number {
-    return (this.won * 3) + this.drawn
+  calculatePoints (): void {
+    this.points = (this.won * 3) + this.drawn
   }
 
   games (): number {

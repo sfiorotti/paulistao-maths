@@ -41,7 +41,10 @@ export class GameBuild implements Game {
 
     this.principal.setGoalsFor(goalsPrincipal)
     this.principal.setGoalsAgainst(goalsVisitor)
+    this.principal.calculatePoints()
+
     this.visitor.setGoalsFor(goalsVisitor)
     this.visitor.setGoalsAgainst(goalsPrincipal)
+    this.visitor.calculatePoints()
   }
 }
