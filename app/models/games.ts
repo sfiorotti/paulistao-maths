@@ -28,6 +28,12 @@ export class GameBuild implements Game {
     this.goalsPrincipal = goalsPrincipal
     this.goalsVisitor = goalsVisitor
 
+    this.principal.setGoalsFor(goalsPrincipal)
+    this.principal.setGoalsAgainst(goalsVisitor)
+
+    this.visitor.setGoalsFor(goalsVisitor)
+    this.visitor.setGoalsAgainst(goalsPrincipal)
+
     if (goalsPrincipal > goalsVisitor) {
       this.principal.setWon()
       this.visitor.setLost()
@@ -38,13 +44,5 @@ export class GameBuild implements Game {
       this.principal.setDrawn()
       this.visitor.setDrawn()
     }
-
-    this.principal.setGoalsFor(goalsPrincipal)
-    this.principal.setGoalsAgainst(goalsVisitor)
-    this.principal.calculatePoints()
-
-    this.visitor.setGoalsFor(goalsVisitor)
-    this.visitor.setGoalsAgainst(goalsPrincipal)
-    this.visitor.calculatePoints()
   }
 }
