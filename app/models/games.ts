@@ -23,4 +23,25 @@ export class GameBuild implements Game {
     this.stadium = stadium
     this.datetime = datetime
   }
+
+  setGame (goalsPrincipal: number, goalsVisitor: number) {
+    this.goalsPrincipal = goalsPrincipal
+    this.goalsVisitor = goalsVisitor
+
+    if (goalsPrincipal > goalsVisitor) {
+      this.principal.setWon()
+      this.visitor.setLost()
+    } else if (goalsPrincipal < goalsVisitor) {
+      this.principal.setLost()
+      this.visitor.setWon()
+    } else {
+      this.principal.setDrawn()
+      this.visitor.setDrawn()
+    }
+
+    this.principal.setGoalsFor(goalsPrincipal)
+    this.principal.setGoalsAgainst(goalsVisitor)
+    this.visitor.setGoalsFor(goalsVisitor)
+    this.visitor.setGoalsAgainst(goalsPrincipal)
+  }
 }

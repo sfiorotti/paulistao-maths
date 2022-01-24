@@ -9,6 +9,11 @@ export interface Team {
   goalsFor: number
   goalsAgainst: number
   goalsDifference(): number
+  setWon(): void
+  setLost(): void
+  setDrawn(): void
+  setGoalsFor(goals: number): void
+  setGoalsAgainst(goals: number): void
 }
 
 export class TeamBuild implements Team {
@@ -35,5 +40,25 @@ export class TeamBuild implements Team {
 
   goalsDifference (): number {
     return this.goalsFor - this.goalsAgainst
+  }
+
+  setWon (): void {
+    this.won += 1
+  }
+
+  setLost (): void {
+    this.lost += 1
+  }
+
+  setDrawn (): void {
+    this.drawn += 1
+  }
+
+  setGoalsFor (goals: number): void {
+    this.goalsFor += goals
+  }
+
+  setGoalsAgainst (goals: number): void {
+    this.goalsAgainst += goals
   }
 }
