@@ -1,5 +1,5 @@
 import { groupBy } from '../functions/groupBy'
-import { sortBy } from '../functions/sortBy'
+import { sequenceSortBy, sortBy } from '../functions/sortBy'
 import { Round } from './rounds'
 import { Team } from './teams'
 
@@ -22,12 +22,15 @@ export class TableBuild implements Table {
   showTableGroup (): void {
     const sortTeams = sortBy(this.teams, 'group')
     const table = groupBy(sortTeams, 'group')
+    sequenceSortBy(table.A)
+    sequenceSortBy(table.B)
+    sequenceSortBy(table.C)
+    sequenceSortBy(table.D)
     console.log(table)
   }
 
   showTableComplete (): void {
-    const sortTeams = sortBy(this.teams, 'name')
-    const sortPoints = sortBy(sortTeams, 'points')
-    console.log(sortPoints)
+    const sortTeams = sequenceSortBy(this.teams)
+    console.log(sortTeams)
   }
 }
