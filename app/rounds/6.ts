@@ -32,8 +32,14 @@ const game4 = new GameBuild(InterLimeira, Mirassol, 'Major Levy Sobrinho', new D
 game4.setGame(2, 2)
 
 const game5 = new GameBuild(Santos, Ituano, 'Vila Belmiro', new Date(2022, 1, 13, 16))
+game5.setGame(2, 1)
+
 const game6 = new GameBuild(PontePreta, SaoPaulo, 'Moisés Lucarelli', new Date(2022, 1, 13, 18, 30))
+game6.setGame(1, 2)
+
 const game7 = new GameBuild(SaoBernardo, Bragantino, 'Primeiro de Maio', new Date(2022, 1, 13, 20, 30))
+game7.setGame(1, 0)
+
 const game8 = new GameBuild(Palmeiras, Corinthians, 'Allianz Parque', new Date(2022, 2, 17, 20, 30))
 
 export const Round = new RoundBuild('6ª rodada', [game1, game2, game3, game4, game5, game6, game7, game8])
