@@ -3,6 +3,8 @@ import { sequenceSortBy, sortBy } from '../functions/sortBy'
 import { Round } from './rounds'
 import { Team } from './teams'
 
+const columns = ['name', 'points', 'games', 'won', 'drawn', 'lost', 'goalsFor', 'goalsAgainst', 'goalsDifference']
+
 interface Table {
   teams: Team[]
   rounds: Round[]
@@ -23,14 +25,20 @@ export class TableBuild implements Table {
     const sortTeams = sortBy(this.teams, 'group')
     const table = groupBy(sortTeams, 'group')
     sequenceSortBy(table.A)
+    console.table(table.A, columns)
+
     sequenceSortBy(table.B)
+    console.table(table.B, columns)
+
     sequenceSortBy(table.C)
+    console.table(table.C, columns)
+
     sequenceSortBy(table.D)
-    console.log(table)
+    console.table(table.D, columns)
   }
 
   showTableComplete (): void {
     const sortTeams = sequenceSortBy(this.teams)
-    console.log(sortTeams)
+    console.table(sortTeams, columns)
   }
 }
