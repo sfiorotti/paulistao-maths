@@ -20,3 +20,5 @@ yarn install
 ```
 yarn start
 ```
+
+![image](https://user-images.githubusercontent.com/32399548/156264888-ad0a9bde-d68a-4d44-98bf-746de5bd7518.png)
