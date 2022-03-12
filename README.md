@@ -12,7 +12,7 @@ Por enquanto minha motivação é somente montar as tabelas para aos poucos impl
 ## Como instalar
 
 ```
-yarn install
+yarn
 ```
 
 ## Como iniciar
