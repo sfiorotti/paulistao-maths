@@ -41,5 +41,6 @@ const game7 = new GameBuild(Ferroviaria, Bragantino, 'Fonte Luminosa', new Date(
 game7.setGame(1, 1)
 
 const game8 = new GameBuild(SaoPaulo, Palmeiras, 'Morumbi', new Date(2022, 2, 10, 20, 30))
+game8.setGame(0, 1)
 
 export const Round = new RoundBuild('4ª rodada', [game1, game2, game3, game4, game5, game6, game7, game8])

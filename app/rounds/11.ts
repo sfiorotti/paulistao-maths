@@ -20,12 +20,16 @@ import { GameBuild } from '../models/games'
 import { RoundBuild } from '../models/rounds'
 
 const game1 = new GameBuild(AguaSanta, SantoAndre, 'Distrital do Inamar', new Date(2022, 2, 12, 15))
+game1.setGame(1, 1)
 
 const game2 = new GameBuild(Guarani, Ferroviaria, 'Brinco de Ouro', new Date(2022, 2, 12, 16))
+game2.setGame(2, 1)
 
 const game3 = new GameBuild(Corinthians, PontePreta, 'Neo Química Arena', new Date(2022, 2, 12, 18, 30))
+game3.setGame(5, 0)
 
 const game4 = new GameBuild(InterLimeira, SaoBernardo, 'Major Levy Sobrinho', new Date(2022, 2, 12, 20, 30))
+game4.setGame(2, 1)
 
 const game5 = new GameBuild(Mirassol, SaoPaulo, 'Municipal de Mirassol', new Date(2022, 2, 13, 16))
 
